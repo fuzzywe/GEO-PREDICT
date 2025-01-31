@@ -1,0 +1,128 @@
+html, body {
+    font-family: "Montserrat", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    flex-grow: 1; /* Allows content to grow and fill available space */
+}
+
+h2{
+    color: black;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+/* Background Image Section */
+.background-image {
+    background-image: url('../images/what.jpg'); /* Replace with the correct image path */
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end; /* Align text to the right */
+    align-items: center; /* Vertically center the text */
+    padding-right: 10%; /* Adjust spacing */
+    color: white;
+    overflow: hidden; /* Hide overflow for smooth animation */
+}
+
+.navbar {
+    background-color: rgb(32, 28, 28);
+}
+
+.navbar-brand {
+    margin-left: 2%;
+    font-size: 30px;
+    color: white;
+}
+
+.nav-link {
+    font-size: 17px;
+    color: white;
+}
+
+.navbar-nav {
+    padding-left: 40%;
+    margin-right: 2%;
+}
+
+.nav-link:hover {
+    transform: scale(1.2); /* Increase the size by 20% on hover */
+    transition: transform 0.2s ease; /* Animate the size change smoothly */
+    color: white;
+}
+
+/* Section Styling */
+.disaster-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.disaster-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.card {
+    width: 300px;
+    padding: 20px;
+    background: rgba(26, 25, 25, 0.568);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s ease-in-out;
+}
+
+.card img {
+    width: 100%; /* Make the image width match the card's width */
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the image scales and crops appropriately */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: #fff6f6;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+/* Slide-in Animation */
+.card.animate {
+    animation: slideIn 0.7s ease-in-out forwards;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

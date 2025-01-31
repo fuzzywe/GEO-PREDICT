@@ -1,0 +1,115 @@
+/* General Reset and Styling */
+html, body {
+    font-family: "Montserrat", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    flex-grow: 1; /* Allows content to grow and fill available space */
+}
+
+/* Background Image Section */
+.background-image {
+    background-image: url('../images/contact.jpg'); /* Replace with the correct image path */
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end; /* Align text to the right */
+    align-items: center; /* Vertically center the text */
+    padding-right: 10%; /* Adjust spacing */
+    color: white;
+    overflow: hidden; /* Hide overflow for smooth animation */
+}
+
+.text-content {
+    position: absolute; /* Position relative to the parent (.background-image) */
+    top: 15%; /* Adjust to move text vertically */
+    max-width: 40%; /* Limit text width for better readability */
+    text-align: left; /* Align text to the right */
+    animation: slide-in 1s ease-in-out; /* Apply slide-in animation */
+}
+
+h1 {
+    color: black;
+    font-size: 50px;
+    margin-bottom: 1px;
+    opacity: 0; /* Start hidden */
+    animation: fade-in 1.5s ease-in 0.5s forwards; /* Fade-in with delay */
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    opacity: 0; /* Start hidden */
+    animation: fade-in 2s ease-in 0.8s forwards; /* Fade-in with delay */
+}
+
+p {
+    color: black;
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0; /* Start hidden */
+    animation: fade-in 1.5s ease-in 1s forwards; /* Fade-in with delay */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgb(32, 28, 28);
+}
+
+.navbar-brand {
+    margin-left: 2%;
+    font-size: 30px;
+    color: white;
+}
+
+.nav-link {
+    font-size: 17px;
+    color: white;
+}
+
+.navbar-nav {
+    padding-left: 40%;
+    margin-right: 2%;
+}
+
+.nav-link:hover {
+    transform: scale(1.2); /* Increase the size by 20% on hover */
+    transition: transform 0.2s ease; /* Animate the size change smoothly */
+    color: white;
+}
+
+/* Footer Styling */
+.footer-background {
+    background-color: rgb(65, 65, 65);
+}
+
+
+
+/* Animations */
+@keyframes slide-in {
+    from {
+        transform: translateX(100%); /* Start from the right */
+        opacity: 0; /* Hidden */
+    }
+    to {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,110 @@
+html, body {
+    font-family: "Montserrat", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    background-image: url('../images/bbbbbg.jpeg'); /* Replace with the correct image path */
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end; /* Align text to the right */
+    align-items: center; /* Vertically center the text */
+    padding-right: 10%; /* Adjust spacing */
+    color: white;
+    overflow: hidden; /* Hide overflow for smooth animation */
+}
+
+.row{
+    margin-top: -60px;
+}
+
+h1{
+    
+    text-align: center;
+    font-size: 50px;
+}
+
+.card{
+    background: rgba(73, 73, 73, 0.425);
+    margin-left: 100px;
+}
+
+.card h5{
+    color: white;
+}
+
+.card p{
+    color: white;
+}
+.container{
+    max-width: 100%;
+    background-color: #36454F;
+}
+h1{
+    color: aliceblue;
+}
+h2{
+    text-align: center;
+
+}
+.h-100 {
+    margin-bottom: 20px;
+}
+.h-100 img {
+    max-width: 100%;
+    height: 60%;
+}
+.img-fluid {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+.img-maximize {
+    width: 100%;
+    height: auto;
+}
+
+.active:hover {
+    transform: scale(1.1); /* Increase the size by 10% on hover */
+    transition: transform 0.2s ease; /* Animate the size change smoothly */
+    color: aqua;
+}  
+.h-100:hover {
+    transform: scale(1.07); /* Increase the size by 10% on hover */
+    transition: transform 0.2s ease; /* Animate the size change smoothly */
+}  
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgb(32, 28, 28);
+}
+
+.navbar-brand {
+    margin-left: 2%;
+    font-size: 30px;
+    color: white;
+}
+
+.nav-link {
+    font-size: 17px;
+    color: white;
+}
+
+.navbar-nav {
+    padding-left: 40%;
+    margin-right: 2%;
+}
+
+.nav-link:hover {
+    transform: scale(1.2); /* Increase the size by 20% on hover */
+    transition: transform 0.2s ease; /* Animate the size change smoothly */
+    color: white;
+}
